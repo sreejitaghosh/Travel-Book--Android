@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".search">
+
+
+    <TextView
+        android:id="@+id/list"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="20dp"
+        android:text="Search"
+        android:textColor="#081977"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/fromType"
+        android:layout_width="82dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:hint="From: "
+        android:padding="5dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#081977"/>
+
+    <EditText
+        android:id="@+id/SearchFrom"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_toRightOf="@+id/fromType"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/toType"
+        android:layout_width="82dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/fromType"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:hint="To: "
+        android:padding="5dp"
+        android:textColor="#081977"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/SearchTo"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SearchFrom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@+id/toType"
+        android:padding="10dp" />
+
+
+    <Button
+        android:id="@+id/SearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:onClick="SearchButton"
+        android:layout_below="@+id/SearchTo" />
+
+    <ListView
+        android:id="@+id/SearchList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/SearchButton" >
+    </ListView>
+
+</RelativeLayout>

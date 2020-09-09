@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Travel_Book</string>
+    <string name="prompt_email">sample@example.com</string>
+    <string name="prompt_password">password</string>
+    <string name="action_sign_in_short" />
+    <string-array name="HintQuestion">
+        <item>Whats your favorite book</item>
+        <item>Mother Maidans Name</item>
+        <item>Favorite Cusine</item>
+        <item>Favorite Destination</item>
+        <item>Birth Place</item>
+    </string-array>
+</resources>
