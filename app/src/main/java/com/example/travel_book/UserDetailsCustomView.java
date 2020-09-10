@@ -71,15 +71,15 @@ public class UserDetailsCustomView extends BaseAdapter {
 
             LayoutInflater li = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = li.inflate(R.layout.activity_user_details_custom_view, viewGroup , false);
-            hold.photo_url1 = view.findViewById(R.id.collection);
-            hold.Caption1 = view.findViewById(R.id.Caption);
-            hold.from_location1 = view.findViewById(R.id.from_location);
-            hold.to_location1 = view.findViewById(R.id.to_location);
-            hold.experience1 = view.findViewById(R.id.experience);
-            hold.hotel1 = view.findViewById(R.id.hotel);
-            hold.flight1 = view.findViewById(R.id.flight);
-            hold.visa1 = view.findViewById(R.id.visa);
-            hold.linear1 = view.findViewById(R.id.linear);
+            hold.photo_url1 = view.findViewById(R.id.collection1);
+            hold.Caption1 = view.findViewById(R.id.Caption1);
+            hold.from_location1 = view.findViewById(R.id.from_location1);
+            hold.to_location1 = view.findViewById(R.id.to_location1);
+            hold.experience1 = view.findViewById(R.id.experience1);
+            hold.hotel1 = view.findViewById(R.id.hotel1);
+            hold.flight1 = view.findViewById(R.id.flight1);
+            hold.visa1 = view.findViewById(R.id.visa1);
+            hold.linear1 = view.findViewById(R.id.linear1);
             view.setTag(hold);
         }
 

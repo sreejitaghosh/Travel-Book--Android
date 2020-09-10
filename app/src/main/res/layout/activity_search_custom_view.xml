@@ -1,37 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@+id/relative1"
+<RelativeLayout
+    android:id="@+id/RL"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".searchCustomVIew"
-    android:padding="10dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:padding="10dp">
 
     <TextView
-        android:id="@+id/to1"
+        android:id="@+id/Email_Id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:text="To:"
-        android:textColor="#303F9F"/>
-
-    <TextView
-        android:id="@+id/EMailId1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/to1"
-        android:padding="5dp"
-        android:text="User:"
+        android:text="User Email"
         android:textColor="#303F9F" />
 
     <TextView
-        android:id="@+id/Location1"
+        android:id="@+id/Destination"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/EMailId1"
+        android:layout_below="@+id/Email_Id"
         android:padding="5dp"
-        android:text="Location:"
+        android:text="Destination"
         android:textColor="#303F9F" />
+
 </RelativeLayout>
-

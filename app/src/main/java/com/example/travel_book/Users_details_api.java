@@ -8,6 +8,30 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Users_details_api {
     @JsonProperty("Caption")
     private String[] Caption;
+    @JsonProperty("ResponseStatus")
+    private String ResponseStatus;
+    @JsonProperty("photo_url")
+    private String[] photo_url;
+    @JsonProperty("experience")
+    private String[] experience;
+    @JsonProperty("hotel")
+    private String[] hotel;
+    @JsonProperty("flight")
+    private String[] flight;
+    @JsonProperty("visa")
+    private String[] visa;
+    @JsonProperty("from_location")
+    private String[] from_location;
+    @JsonProperty("to_location")
+    private String[] to_location;
+
+    public String getResponseStatus() {
+        return ResponseStatus;
+    }
+
+    public void setResponseStatus(String responseStatus) {
+        ResponseStatus = responseStatus;
+    }
 
     public String[] getCaption() {
         return Caption;
@@ -72,19 +96,4 @@ public class Users_details_api {
     public void setTo_location(String[] to_location) {
         this.to_location = to_location;
     }
-
-    @JsonProperty("photo_url")
-    private String[] photo_url;
-    @JsonProperty("experience")
-    private String[] experience;
-    @JsonProperty("hotel")
-    private String[] hotel;
-    @JsonProperty("flight")
-    private String[] flight;
-    @JsonProperty("visa")
-    private String[] visa;
-    @JsonProperty("from_location")
-    private String[] from_location;
-    @JsonProperty("to_location")
-    private String[] to_location;
 }

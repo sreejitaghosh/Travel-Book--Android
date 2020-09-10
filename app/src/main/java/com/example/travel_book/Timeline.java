@@ -66,6 +66,8 @@ public class Timeline extends AppCompatActivity {
     public void Search (View view)
     {
         Intent Search = new Intent(this, search.class);
+        System.out.println("Sending Currently loggedin email to search page : "+email);
+        Search.putExtra("CLEmail",email);
         startActivity(Search);
     }
 

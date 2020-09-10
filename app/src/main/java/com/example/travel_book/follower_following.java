@@ -48,7 +48,7 @@ public class follower_following extends BaseAdapter {
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(final int i, View view, ViewGroup viewGroup) {
         ViewHolder hold;
         if (view != null){
             hold = (ViewHolder)view.getTag();
@@ -67,7 +67,7 @@ public class follower_following extends BaseAdapter {
             public void onClick(View view) {
                 Intent UserDetailsPage = new Intent(context, UserDetails.class);
                 UserDetailsPage.putExtra("email_address",CurrentlyLoggedInEmail );
-                UserDetailsPage.putExtra("otherUserEmail","");
+                UserDetailsPage.putExtra("otherUserEmail",EmailIdList.get(i));
                 context.startActivity(UserDetailsPage);
             }
         });

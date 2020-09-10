@@ -1,44 +1,42 @@
 package com.example.travel_book;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
-import android.os.Bundle;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
 public class searchCustomVIew extends BaseAdapter {
 
-    ArrayList<String> Result_email,Result_to_location;
+    ArrayList<String> Result_email, Result_to_location;
+    String CLEmail;
     Context context;
 
     public class ViewHolder{
-        private TextView to1;
-        private TextView EMailId1;
-        private TextView Location1;
-        RelativeLayout relative1;
+        private TextView Email_Id;
+        private TextView Destination;
+        RelativeLayout RL;
     }
 
-    searchCustomVIew(Context context, ArrayList<String> Result_email, ArrayList<String>Result_to_location){
+    searchCustomVIew(Context context, ArrayList<String> Result_email, ArrayList<String>Result_to_location, String CLEmail){
+        this.context = context;
         this.Result_email = Result_email;
         this.Result_to_location = Result_to_location;
-        this.context = context;
+        this.CLEmail = CLEmail;
     }
 
     @Override
     public int getCount() {
-        return Result_to_location.size();
+        return Result_email.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return Result_to_location.get(i);
+        return Result_email.get(i);
     }
 
     @Override
@@ -47,7 +45,7 @@ public class searchCustomVIew extends BaseAdapter {
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup)
+    public View getView(final int i, View view, ViewGroup viewGroup)
     {
         ViewHolder hold;
         if(view != null){
@@ -55,19 +53,25 @@ public class searchCustomVIew extends BaseAdapter {
         }
         else{
             hold = new ViewHolder();
-
             LayoutInflater li = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = li.inflate(R.layout.activity_search_custom_view, viewGroup , false);
-            hold.to1 = view.findViewById(R.id.to1);
-            hold.EMailId1 = view.findViewById(R.id.EMailId1);
-            hold.Location1 = view.findViewById(R.id.Location1);
-            hold.relative1 = view.findViewById(R.id.relative1);
+            hold.Email_Id = view.findViewById(R.id.Email_Id);
+            hold.Destination = view.findViewById(R.id.Destination);
+            hold.RL = view.findViewById(R.id.RL);
             view.setTag(hold);
         }
 
-        hold.to1.setText("TO: "+Result_to_location.get(i));
-        hold.EMailId1.setText("Caption: "+Result_email.get(i));
-        hold.Location1.setText("From:"+Result_to_location.get(i));
+        hold.Email_Id.setText("Email Address : "+Result_email.get(i));
+        hold.Destination.setText("Destination : "+Result_to_location.get(i));
+        hold.RL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent UserDetailsPage = new Intent(context, UserDetails.class);
+                UserDetailsPage.putExtra("email_address", CLEmail);
+                UserDetailsPage.putExtra("otherUserEmail",Result_email.get(i));
+                context.startActivity(UserDetailsPage);
+            }
+        });
         return view;
     }
 }

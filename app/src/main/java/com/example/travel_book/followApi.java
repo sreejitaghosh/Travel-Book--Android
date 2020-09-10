@@ -17,9 +17,6 @@ public class followApi {
     @JsonProperty("Result_to_location")
     private String[] Result_to_location;
 
-    @JsonProperty("Search_KeyWord")
-    private String[] Search_KeyWord;
-
     public String[] getFollowerList() {
         return followerList;
     }
@@ -50,14 +47,6 @@ public class followApi {
 
     public void setResult_to_location(String[] result_to_location) {
         Result_to_location = result_to_location;
-    }
-
-    public String[] getSearch_KeyWord() {
-        return Search_KeyWord;
-    }
-
-    public void setSearch_KeyWord(String[] search_KeyWord) {
-        Search_KeyWord = search_KeyWord;
     }
 
 }
